@@ -8,6 +8,8 @@ List titleMovie =[
   "Dumbo",
 ];
 
+List titleMovieReversed= titleMovie.reversed.toList();
+
 
 ///////////////////////////////////////////////////////////////////
 
@@ -19,7 +21,7 @@ List imageMovie =[
   "https://image.tmdb.org/t/p/w500/deTOAcMWuHTjOUPQphwcPFFfTQz.jpg",
 ];
 
-
+List imageMovieReversed= imageMovie.reversed.toList();
 
 ////////////////////////////////////////////////////////////////////
 
@@ -32,4 +34,4 @@ List descriptionMovie =[
   "A young elephant, whose oversized ears enable him to fly, helps save a struggling circus, but when the circus plans a new venture, Dumbo and his friends discover dark secrets beneath its shiny veneer.",
 ];
 
-
+List descriptioneMovieReversed= descriptionMovie.reversed.toList();

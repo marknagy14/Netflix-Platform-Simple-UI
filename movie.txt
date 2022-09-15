@@ -1,0 +1,169 @@
+
+****************animations(animated conainer)
+import 'package:flutter/material.dart';
+
+class TestScreen extends StatefulWidget {
+
+  @override
+  State<TestScreen> createState() => _TestScreenState();
+}
+
+class _TestScreenState extends State<TestScreen> {
+  List title = [
+    "ahmed",
+    "mohamed",
+    "ali",
+    "mohamed",
+    "ahmed",
+    "mohamed",
+    "ali",
+    "mohamed",
+    "ahmed",
+    "mohamed",
+    "ali",
+    "mohamed",
+    "ahmed",
+    "mohamed",
+    "ali",
+    "mohamed",
+    "ahmed",
+    "mohamed",
+    "ali",
+  ];
+  double height =200;
+  double width=200;
+  Color color=Colors.red;
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Test Screen'),
+        centerTitle: true,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            AnimatedContainer(duration:Duration(seconds: 2) ,
+              width: width,
+              height: height,
+              color: color,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  height=100;
+                  width=100;
+                  color=Colors.blue;
+                });
+              },
+              child: Text('Button'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+**********************************
+***********************************functions
+
+import 'package:flutter/material.dart';
+
+class TestScreen extends StatefulWidget {
+  @override
+  State<TestScreen> createState() => _TestScreenState();
+}
+
+class _TestScreenState extends State<TestScreen> {
+  List title = [
+    "ahmed",
+    "mohamed",
+    "ali",
+    "mohamed",
+    "ahmed",
+    "mohamed",
+    "ali",
+    "mohamed",
+    "ahmed",
+    "mohamed",
+    "ali",
+    "mohamed",
+    "ahmed",
+    "mohamed",
+    "ali",
+    "mohamed",
+    "ahmed",
+    "mohamed",
+    "ali",
+  ];
+  double height = 200;
+  double width = 200;
+  Color color = Colors.red;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Test Screen'),
+        centerTitle: true,
+      ),
+
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            container_item(
+              w: 100,
+              h: 100,
+              c: Colors.purpleAccent,
+            ),
+            container_item(
+              h: 100,
+              w: 100,
+              c: Colors.purple,
+            ),
+            container_item(h: 100, w: 100, c: Colors.pink),
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  height = 100;
+                  width = 100;
+                  color = Colors.blue;
+                });
+              },
+              child: Text('Button'),
+            ),
+
+          ],
+
+        ),
+
+      ),
+
+    );
+
+  }
+
+  Widget container_item(
+      {double w = 100, double h = 100, Color c = Colors.white}) {
+    return (Container(
+      width: w,
+      height: h,
+      color: c,
+    ));
+  }
+}
+***********************************
+*********************************** listview.builder
+// same as listView but loads only what is obvious
+ body: Center(
+        child:ListView.builder(itemCount: 20,itemBuilder: (context,index){
+          return Text("item $index ");
+        })
+
+      ),
+***********************************
+***********************************
